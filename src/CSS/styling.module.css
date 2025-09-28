@@ -1,0 +1,201 @@
+html,
+body{
+	height: 100%;
+	margin: 0;
+}
+
+body{font-family: 'Inter';}
+
+.darkfont { color: hsl(240, 38%, 20%);}
+.lightfont {color: hsl(240, 18%, 77%);}
+
+section#main {
+	display: flex;
+	flex-direction: column;
+}
+
+
+section .slider {
+	position: relative;
+	display: flex;
+	flex-direction: column-reverse;
+	margin: auto;	
+	margin-top: 65px;	
+	padding-left: 30px;
+    padding-right: 30px;
+	width: 330px;
+}
+
+section .slider .description .img-div {
+    width: 50px;
+    margin: auto;
+}
+
+section .slider .description .img-div img {	width: 85%;}
+	
+section .slider .picture{
+	display: flex;
+	flex-direction: column;	
+	position: relative;
+}
+
+section .slider .picture .background-picture {
+	width: 300px;
+    height: auto;
+    margin-top: -30px;
+}
+
+section .slider .picture .background-picture img {
+	width: 100%;
+	height: 100%;
+}
+
+section .slider .picture .person {
+    width: 229px;
+    height: 230px;
+    position: absolute;
+    left: 20px;
+    border-radius: 5px;
+    box-shadow: 10px 45px 80px -85px  hsl(240, 38%, 20%);
+}
+
+section .slider .picture .person img {
+	width: 100%;
+	height: 100%;
+}
+
+section .slider .picture .icons {
+	position: relative;
+    width: 112px;
+    margin: auto;
+    right: 15px;
+    top: -50px;
+	border-radius: 25px;
+	background-color: hsl(0, 0%, 100%);
+}
+
+section .slider .picture .icons a{ cursor: pointer;}
+section .slider .picture .icons img{
+	padding: 18px 20px 10px 20px;
+}
+
+section .slider .description .comments {
+	font-size: 18px;
+	font-weight: 400;
+    line-height: 25px;
+    text-align: center;
+    margin-top: -23px;
+    width: 314px;
+}
+	
+section .slider .description .title {
+	width: 217px;
+    font-size: 16px;
+    margin: auto;
+	text-align: center;
+}
+
+section .slider .description .title span {
+	display: block;
+	margin-bottom: 3px;
+}
+
+section .slider .description .title .darkfont{font-weight: 800;}
+
+section #slider-2 {	display: none;}
+
+@media only screen and (min-width: 768px) {
+	section .slider .picture .background-picture {width: 440px;	}
+	
+	section .slider {width: 450px;}
+
+	section .slider .picture .person {
+		width: 355px;
+		height: 340px;
+		margin-top: 5px;
+	}
+
+	section .slider .description .comments {width: auto;}
+}
+
+@media only screen and (min-width: 1024px) {
+section .slider .picture .background-picture {  width: 575px;}
+
+section .slider .picture .person {
+    width: 460px;
+    height: 438px;
+    margin-top: 11px;
+}
+
+section .slider .picture .icons { top: -81px;}
+
+section .slider .description .img-div {
+    width: 80px;
+}
+
+section .slider .description .comments {
+    font-size: 28px;
+ font-weight: 300;
+    line-height: 40px;
+}
+}
+
+@media only screen and (min-width: 1100px) {
+	section .slider{
+        flex-direction: row;
+        width: 1000px;
+	    margin-top: 32px;
+	}
+	
+	section .slider .picture {
+    right: 150px;
+	top: 40px;
+}
+
+section .slider .picture .icons { margin-left: 130px;}
+	section .slider .description .comments {
+    text-align: left;
+    width: 565px;
+}
+
+section .slider .description .title span { display: inline;
+}
+
+section .slider .description .title {
+    width: 330px;
+    margin: 0;
+    text-align: left;
+}
+
+section .slider .description .img-div {
+    width: 118px;
+    margin-left: 102px;
+}
+
+section .slider .description {
+	align-self: center;
+	z-index: 1;
+}
+}
+
+.show {
+    display:block;
+    animation: none;
+}
+
+.hide {
+    display: none;
+}
+
+.slide {
+    animation: slide 2s linear infinite;
+}
+
+@keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(400px);
+  }
+}
